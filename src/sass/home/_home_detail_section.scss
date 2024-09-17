@@ -1,0 +1,134 @@
+.home-detail-section {
+  height: 85vh;
+  min-height: 590px;
+  position: sticky;
+  top: 10vh;
+  font-size: 0.7rem;
+
+  h4 {
+    margin: 0;
+  }
+
+  .detail-container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: -webkit-fill-available;
+
+    .detail-img-container {
+      position: relative;
+      top: -50px;
+      width: 80%;
+      
+      .detail-img {
+        width: 100%;
+        top: -75px;
+        min-height: 50px;
+      }
+    }
+
+    .detail-info-container {
+      margin-top: -50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+
+      .detail-name-container {
+        text-align: center;
+
+        .detail-name {
+          margin: 0;
+        }
+      }
+
+      .detail-types-container {
+        width: 100%;
+
+        .detal-types-list {
+          padding: 0;
+          list-style: none;
+          display: flex;
+          justify-content: space-evenly;
+        }
+      }
+
+      .detail-description-container {
+        .detail-description-title {
+          text-align: center;
+        }
+        .detail-description-para {
+          text-align: justify;
+        }
+      }
+
+      .detail-abilities-container {
+        width: 100%;
+        text-align: center;
+
+        .detail-abilities-list {
+          display: flex;
+          justify-content: space-evenly;
+          padding: 0;
+          list-style: none;
+          width: 100%;
+          gap: 5px;
+
+          .detail-abilities-item {
+            background-color: rgba(129, 129, 129, 0.2);
+            padding: 7px;
+            border-radius: 20px;
+          }
+        }
+      }
+
+      .detail-more-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+
+        .detail-more-item {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      .detail-stats-container {
+        width: 100%;
+        text-align: center;
+
+        .detail-stats-list {
+          width: 100%;
+          list-style: none;
+          padding: 0;
+          display: flex;
+          justify-content: space-between;
+
+          .detail-stats-item {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .detail-evo-container {
+        display: flex;
+        height: 50px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .detail-evo-div {
+          display: flex;
+          flex-direction: column;
+          overflow-y: auto;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}

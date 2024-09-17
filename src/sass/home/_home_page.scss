@@ -1,0 +1,23 @@
+.home-page {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .home-page-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px
+  }
+
+  .btn-to-top {
+    position: fixed;
+    right: 1.5vw;
+    bottom: 4.5vh;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

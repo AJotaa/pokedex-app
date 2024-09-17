@@ -1,0 +1,22 @@
+.base-button {
+  background-color: aqua;
+  color: white;
+  font-family: inherit;
+  border-radius: 10px;
+  box-shadow: 0px 2px 7px 1px rgb(0 0 0 / 20%);
+  cursor: pointer;
+
+  button {
+    padding: 10px;
+    color: inherit;
+    background-color: transparent;
+    font-family: inherit;
+    border: none;
+    cursor: inherit;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: inherit;
+  }
+}
