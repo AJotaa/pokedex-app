@@ -1,10 +1,10 @@
 // import logo from './logo.svg';
-import { AppRouter } from "./router/router";
+import { HomePage } from "./pages/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <AppRouter />
+      <HomePage />
     </div>
   );
 }

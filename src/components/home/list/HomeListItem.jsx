@@ -5,22 +5,38 @@ import { BaseSpinner } from "../../interface/BaseSpinner";
 import { useFetch } from "../../../hooks/useFetch";
 import { useStringFormat } from "../../../hooks/useStringFormat";
 import { useFocus } from "../../../hooks/useFocus";
+import { useSize } from "../../../hooks/useSize";
 
-export const HomeListItem = ({ info, itemSelect, theRef, item }) => {
+export const HomeListItem = ({
+  info,
+  itemSelect,
+  theRef,
+  item,
+  handleOpen,
+}) => {
   const url = "https://pokeapi.co/api/v2/pokemon/" + info;
   const [data, isLoading] = useFetch(url);
   const { id, sprites, types } = data;
   const name = useStringFormat(data?.name);
   const focusClass = useFocus(id, +item);
+  const { width } = useSize();
 
   const itemTypes = types?.map((e) => {
     return <BaseBadge data={e} key={e.type.name} />;
   });
 
+  function handleItem(info) {
+    itemSelect(info);
+
+    if (width <= 500) {
+      handleOpen(true);
+    }
+  }
+
   return (
     <li
       className="home-list-item"
-      onClick={() => itemSelect(info)}
+      onClick={() => handleItem(info)}
       ref={!isLoading ? theRef : null}
     >
       <BaseCard extraClass={focusClass}>

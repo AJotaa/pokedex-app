@@ -3,7 +3,8 @@ import { useIds } from "../../../hooks/useIds";
 import { BaseSpinner } from "../../interface/BaseSpinner";
 import { HomeListItem } from "./HomeListItem";
 
-export const HomeList = ({ itemSelect, pageData, isLoading, item, theRef }) => {
+export const HomeList = ({ itemSelect, pageData, isLoading, item, theRef, handleOpen }) => {
+  
   const { getId } = useIds();
   const pageDataIds = getId(pageData);
 
@@ -16,6 +17,7 @@ export const HomeList = ({ itemSelect, pageData, isLoading, item, theRef }) => {
           key={e + i}
           item={item}
           theRef={theRef}
+          handleOpen={handleOpen}
         />
       );
     } else {
@@ -25,6 +27,7 @@ export const HomeList = ({ itemSelect, pageData, isLoading, item, theRef }) => {
           itemSelect={itemSelect}
           key={e + i}
           item={item}
+          handleOpen={handleOpen}
         />
       );
     }

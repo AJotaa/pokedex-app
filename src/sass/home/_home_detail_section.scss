@@ -1,5 +1,5 @@
 .home-detail-section {
-  height: 85vh;
+  height: fit-content;
   min-height: 590px;
   position: sticky;
   top: 10vh;
@@ -20,11 +20,12 @@
       position: relative;
       top: -50px;
       width: 80%;
-      
+
       .detail-img {
         width: 100%;
         top: -75px;
         min-height: 50px;
+        display: block;
       }
     }
 
